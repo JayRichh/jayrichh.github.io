@@ -690,7 +690,7 @@ class ToolIoTDataGenerator extends HTMLElement {
     const serialNumber = `${schema.serialPrefix}${String(deviceNum).padStart(3, '0')}`;
     
     const row = {
-      InstrumentTag: serialNumber,
+      SerialNumber: serialNumber,
       Manufacturer: schema.manufacturer,
       DeviceType: schema.deviceType,
       FirmwareVersion: schema.firmwareVersion,
