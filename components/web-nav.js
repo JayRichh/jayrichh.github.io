@@ -163,24 +163,38 @@ class WebNav extends HTMLElement {
             </div>
             
             <div class="nav-section">
-              <div class="nav-section-title">Tools</div>
-              <a href="" class="nav-link tool-link" data-tool="clipboard">Clipboard</a>
-              <a href="" class="nav-link tool-link" data-tool="emoji">Emoji Picker</a>
-              <a href="" class="nav-link tool-link" data-tool="timezone">TimeSync</a>
-              <a href="" class="nav-link tool-link" data-tool="text-transform">Text Transform</a>
+              <div class="nav-section-title">Development & Testing</div>
               <a href="" class="nav-link tool-link" data-tool="code-tools">Code Tools</a>
+              <a href="" class="nav-link tool-link" data-tool="regex-tester">Regex Tester</a>
+              <a href="" class="nav-link tool-link" data-tool="number-converter">Number Converter</a>
+              <a href="" class="nav-link tool-link" data-tool="timestamp-converter">Timestamp Converter</a>
+              <a href="" class="nav-link tool-link" data-tool="iot-data-generator">IoT Data Generator</a>
               <a href="" class="nav-link tool-link" data-tool="markdown">Markdown Editor</a>
+            </div>
+
+            <div class="nav-section">
+              <div class="nav-section-title">Design & Layout</div>
               <a href="" class="nav-link tool-link" data-tool="color-picker">Color Picker</a>
-              <a href="" class="nav-link tool-link" data-tool="password">Password Generator</a>
+              <a href="" class="nav-link tool-link" data-tool="contrast-checker">Contrast Checker</a>
               <a href="" class="nav-link tool-link" data-tool="css-grid">CSS Grid Builder</a>
               <a href="" class="nav-link tool-link" data-tool="flexbox">Flexbox Builder</a>
               <a href="" class="nav-link tool-link" data-tool="breakpoint-tester">Breakpoint Tester</a>
-              <a href="" class="nav-link tool-link" data-tool="contrast-checker">Contrast Checker</a>
               <a href="" class="nav-link tool-link" data-tool="shader-playground">Shader Playground</a>
             </div>
 
             <div class="nav-section">
+              <div class="nav-section-title">Productivity & Utilities</div>
+              <a href="" class="nav-link tool-link" data-tool="totp">TOTP Generator</a>
+              <a href="" class="nav-link tool-link" data-tool="password">Password Generator</a>
+              <a href="" class="nav-link tool-link" data-tool="clipboard">Clipboard</a>
+              <a href="" class="nav-link tool-link" data-tool="timezone">TimeSync</a>
+              <a href="" class="nav-link tool-link" data-tool="text-transform">Text Transform</a>
+              <a href="" class="nav-link tool-link" data-tool="emoji">Emoji Picker</a>
+            </div>
+
+            <div class="nav-section">
               <div class="nav-section-title">More</div>
+              <a href="" class="nav-link about-link">About</a>
               <a href="https://jayrich.dev" class="nav-link" target="_blank" rel="noopener noreferrer">jayrich.dev</a>
             </div>
           </div>
@@ -194,6 +208,7 @@ class WebNav extends HTMLElement {
     this.navDrawer = this.shadowRoot.querySelector('.nav-drawer')
     this.navClose = this.shadowRoot.querySelector('.nav-close')
     this.homeLink = this.shadowRoot.querySelector('.home-link')
+    this.aboutLink = this.shadowRoot.querySelector('.about-link')
     this.toolLinks = this.shadowRoot.querySelectorAll('.tool-link')
   }
   
@@ -212,6 +227,9 @@ class WebNav extends HTMLElement {
     
     // Set home link
     this.homeLink.href = `${basePath}index.html`
+    
+    // Set about link
+    this.aboutLink.href = `${basePath}about.html`
     
     // Set tool links
     this.toolLinks.forEach(link => {

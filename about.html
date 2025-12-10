@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    
+    <web-seo
+        page-title="About - Developer Tools"
+        description="Technical overview of the architecture and design patterns used in this collection of developer utilities."
+        keywords="web components, shadow dom, progressive enhancement, developer tools"
+        type="website"
+        path="about"
+        image="logo-bg-128.png"
+        category="WebPage"
+        author="Jay Rich">
+    </web-seo>
+</head>
+<body>
+    <web-header></web-header>
+    <web-nav></web-nav>
+
+    <main>
+        <section class="about-section">
+            <h1>About</h1>
+            <div class="about-content">
+                <p>
+                    Built with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">vanilla JavaScript</a> 
+                    and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components" target="_blank" rel="noopener noreferrer">Web Components</a>, 
+                    this collection follows a zero-dependency approach. Each tool is encapsulated using the 
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM" target="_blank" rel="noopener noreferrer">Shadow DOM</a> 
+                    for style isolation, with responsive layouts powered by 
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout" target="_blank" rel="noopener noreferrer">CSS Grid</a> 
+                    and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout" target="_blank" rel="noopener noreferrer">Flexbox</a>. 
+                    Theming uses <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank" rel="noopener noreferrer">CSS custom properties</a>, 
+                    while modern APIs like <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank" rel="noopener noreferrer">localStorage</a> 
+                    and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API" target="_blank" rel="noopener noreferrer">Clipboard API</a> 
+                    handle state and interactions.
+                    <br><br>
+                    No frameworks, no build tools, no servers, no tracking. Just 
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="noopener noreferrer">native browser APIs</a> 
+                    doing what they do best. Everything runs <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview#client-side_programming" target="_blank" rel="noopener noreferrer">client-side</a>, 
+                    with <a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement" target="_blank" rel="noopener noreferrer">progressive enhancement</a> 
+                    ensuring core functionality works everywhere.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <web-footer></web-footer>
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>

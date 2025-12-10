@@ -55,6 +55,12 @@ class WebFooter extends HTMLElement {
         transform: scale(0.95);
       }
       
+      .footer-right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      
       .footer-right a {
         color: var(--light-beige, #f7f5e8);
         text-decoration: none;
@@ -66,6 +72,11 @@ class WebFooter extends HTMLElement {
       
       .footer-right a:hover {
         opacity: 1;
+      }
+      
+      .footer-separator {
+        color: var(--light-beige, #f7f5e8);
+        opacity: 0.5;
       }
       
       @media (hover: hover) {
@@ -85,6 +96,8 @@ class WebFooter extends HTMLElement {
             </button>
           </div>
           <div class="footer-right">
+            <a href="about.html">About</a>
+            <span class="footer-separator">•</span>
             <a href="https://jayrich.dev" target="_blank" rel="noopener noreferrer">jayrich.dev</a>
           </div>
         </div>
@@ -103,12 +116,11 @@ class WebFooter extends HTMLElement {
   }
   
   setupThemeToggle() {
-    // Check for saved theme preference or system preference
+    // Check for saved theme preference (default to light mode)
     const savedTheme = localStorage.getItem('theme')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
     
-    // Set initial theme
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    // Set initial theme - only dark if explicitly saved as dark
+    if (savedTheme === 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark')
       this.themeIcon.textContent = '🌛'
     }

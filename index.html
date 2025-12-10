@@ -23,50 +23,86 @@
     <web-nav></web-nav>
 
     <main>
-        <div class="tools-grid">
-            <tool-card data-title="TOTP Generator" data-route="totp" data-icon="🔐">
-                <p>Generate time-based one-time passwords</p>
-            </tool-card>
-            <tool-card data-title="Clipboard" data-route="clipboard" data-icon="📋">
-                <p>Paste, drag & drop, or select images</p>
-            </tool-card>
-            <tool-card data-title="Emoji Picker" data-route="emoji" data-icon="😊">
-                <p>Search and filter Unicode emoji</p>
-            </tool-card>
-            <tool-card data-title="TimeSync" data-route="timezone" data-icon="🕒">
-                <p>Convert times across zones and track events</p>
-            </tool-card>
-            <tool-card data-title="Text Transform" data-route="text-transform" data-icon="🔤">
-                <p>Encode, decode, and transform text</p>
-            </tool-card>
-            <tool-card data-title="Code Tools" data-route="code-tools" data-icon="📝">
-                <p>Format, validate, and beautify code</p>
-            </tool-card>
-            <tool-card data-title="Markdown Editor" data-route="markdown" data-icon="📄">
-                <p>Edit and preview Markdown documents</p>
-            </tool-card>
-            <tool-card data-title="Color Picker" data-route="color-picker" data-icon="🎨">
-                <p>Select colors and generate palettes</p>
-            </tool-card>
-            <tool-card data-title="Password Generator" data-route="password" data-icon="🔑">
-                <p>Create strong, secure passwords</p>
-            </tool-card>
-            <tool-card data-title="CSS Grid Builder" data-route="css-grid" data-icon="🔲">
-                <p>Create, visualize, and generate CSS Grid layouts</p>
-            </tool-card>
-            <tool-card data-title="Flexbox Builder" data-route="flexbox" data-icon="📏">
-                <p>Create, visualize, and generate CSS Flexbox layouts</p>
-            </tool-card>
-            <tool-card data-title="Breakpoint Tester" data-route="breakpoint-tester" data-icon="📱">
-                <p>Simulate how your layout adapts across devices</p>
-            </tool-card>
-            <tool-card data-title="Contrast Checker" data-route="contrast-checker" data-icon="👁️">
-                <p>Verify that your color choices meet accessibility standards</p>
-            </tool-card>
-            <tool-card data-title="Shader Playground" data-route="shader-playground" data-icon="🎮">
-                <p>Create and experiment with WebGL shaders in real-time</p>
-            </tool-card>
-        </div>
+        <!-- Development & Testing -->
+        <section class="tools-section">
+            <h2 class="section-title">Development & Testing</h2>
+            <div class="tools-grid">
+                <tool-card data-title="Code Tools" data-route="code-tools" data-icon="📝">
+                    <p>Format, validate, and beautify code</p>
+                </tool-card>
+                <tool-card data-title="Regex Tester" data-route="regex-tester" data-icon=".*">
+                    <p>Test and build regex patterns for IoT data parsing</p>
+                </tool-card>
+                <tool-card data-title="Number Converter" data-route="number-converter" data-icon="#️⃣">
+                    <p>Convert between hex, decimal, binary, and octal</p>
+                </tool-card>
+                <tool-card data-title="Timestamp Converter" data-route="timestamp-converter" data-icon="🕐">
+                    <p>Convert between timestamp formats and timezones</p>
+                </tool-card>
+                <tool-card data-title="IoT Data Generator" data-route="iot-data-generator" data-icon="🔬">
+                    <p>Generate realistic CSV datasets for IoT device testing</p>
+                </tool-card>
+                <tool-card data-title="Markdown Editor" data-route="markdown" data-icon="📄">
+                    <p>Edit and preview Markdown documents</p>
+                </tool-card>
+                <div class="coming-soon-wrapper">
+                    <span class="coming-soon-badge">coming soon</span>
+                    <tool-card data-title="AT Command Builder" data-route="at-command-builder" data-icon="📡">
+                        <p>Build cellular, LoRa, and GPS AT commands interactively</p>
+                    </tool-card>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design & Layout -->
+        <section class="tools-section">
+            <h2 class="section-title">Design & Layout</h2>
+            <div class="tools-grid">
+                <tool-card data-title="Color Picker" data-route="color-picker" data-icon="🎨">
+                    <p>Select colors and generate palettes</p>
+                </tool-card>
+                <tool-card data-title="Contrast Checker" data-route="contrast-checker" data-icon="👁️">
+                    <p>Verify that your color choices meet accessibility standards</p>
+                </tool-card>
+                <tool-card data-title="CSS Grid Builder" data-route="css-grid" data-icon="🔲">
+                    <p>Create, visualize, and generate CSS Grid layouts</p>
+                </tool-card>
+                <tool-card data-title="Flexbox Builder" data-route="flexbox" data-icon="📏">
+                    <p>Create, visualize, and generate CSS Flexbox layouts</p>
+                </tool-card>
+                <tool-card data-title="Breakpoint Tester" data-route="breakpoint-tester" data-icon="📱">
+                    <p>Simulate how your layout adapts across devices</p>
+                </tool-card>
+                <tool-card data-title="Shader Playground" data-route="shader-playground" data-icon="🎮">
+                    <p>Create and experiment with WebGL shaders in real-time</p>
+                </tool-card>
+            </div>
+        </section>
+
+        <!-- Productivity & Utilities -->
+        <section class="tools-section">
+            <h2 class="section-title">Productivity & Utilities</h2>
+            <div class="tools-grid">
+                <tool-card data-title="TOTP Generator" data-route="totp" data-icon="🔐">
+                    <p>Generate time-based one-time passwords</p>
+                </tool-card>
+                <tool-card data-title="Password Generator" data-route="password" data-icon="🔑">
+                    <p>Create strong, secure passwords</p>
+                </tool-card>
+                <tool-card data-title="Clipboard" data-route="clipboard" data-icon="📋">
+                    <p>Paste, drag & drop, or select images</p>
+                </tool-card>
+                <tool-card data-title="TimeSync" data-route="timezone" data-icon="🕒">
+                    <p>Convert times across zones and track events</p>
+                </tool-card>
+                <tool-card data-title="Text Transform" data-route="text-transform" data-icon="🔤">
+                    <p>Encode, decode, and transform text</p>
+                </tool-card>
+                <tool-card data-title="Emoji Picker" data-route="emoji" data-icon="😊">
+                    <p>Search and filter Unicode emoji</p>
+                </tool-card>
+            </div>
+        </section>
     </main>
 
     <web-footer></web-footer>

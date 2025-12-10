@@ -411,6 +411,35 @@ main {
   min-height: calc(100vh - var(--header-height) - 4rem);
   display: flex;
   flex-direction: column;
+  gap: clamp(3rem, 6vh, 5rem);
+}
+
+.tools-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-title {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  color: var(--dark-sage);
+  opacity: 0.7;
+  letter-spacing: -0.01em;
+  margin: 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--sage);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: clamp(3rem, 10%, 5rem);
+  height: 2px;
+  background: var(--buff);
 }
 
 .tools-grid {
@@ -418,9 +447,35 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--card-min-width)), 1fr));
   gap: clamp(2rem, 5vw, 3rem);
   padding: 0;
-  margin: 1rem 0 4rem;
+  margin: 0;
   flex: 1;
   align-content: start;
+}
+
+.coming-soon-wrapper {
+  position: relative;
+  display: block;
+}
+
+.coming-soon-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--old-rose);
+  color: var(--light-beige);
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.coming-soon-wrapper tool-card {
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 footer {
@@ -498,6 +553,55 @@ footer {
   }
 }
 
+/* Update this specific section in your CSS */
+
+.about-section {
+  max-width: 65ch;
+  margin: 0 auto;
+}
+
+.about-section h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--dark-sage);
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.about-content {
+  background: var(--beige);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  line-height: 1.8;
+}
+
+.about-content p {
+  font-size: 1.125rem;
+  color: var(--dark-sage);
+  margin: 0;
+  text-align: left;
+  max-width: none;
+}
+
+.about-content strong {
+  color: var(--buff);
+  font-weight: 600;
+}
+
+.about-content a {
+  color: var(--buff);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.about-content a:hover {
+  border-bottom-color: var(--buff);
+}
+
 /* Mobile optimizations */
 @media (max-width: 480px) {
   :root {
@@ -510,6 +614,14 @@ footer {
   
   .tools-grid {
     gap: 1.5rem;
+  }
+  
+  .about-content {
+    padding: 1.5rem;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
   }
 }
 
