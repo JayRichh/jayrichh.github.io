@@ -167,6 +167,7 @@ class WebNav extends HTMLElement {
               <a href="" class="nav-link tool-link" data-tool="code-tools">Code Tools</a>
               <a href="" class="nav-link tool-link" data-tool="regex-tester">Regex Tester</a>
               <a href="" class="nav-link tool-link" data-tool="number-converter">Number Converter</a>
+              <a href="" class="nav-link tool-link" data-tool="guid-base64">GUID Base64</a>
               <a href="" class="nav-link tool-link" data-tool="timestamp-converter">Timestamp Converter</a>
               <a href="" class="nav-link tool-link" data-tool="iot-data-generator">IoT Data Generator</a>
               <a href="" class="nav-link tool-link" data-tool="markdown">Markdown Editor</a>

@@ -1,0 +1,32 @@
+/* External styles for GUID/Base64 Converter Tool */
+/* Most styles are in the component's Shadow DOM for encapsulation */
+
+:root {
+  --dark-sage: #6b6b54;
+  --sage: #a3a380;
+  --beige: #f5f5dc;
+  --vanilla: #d6ce93;
+  --buff: #d8a48f;
+  --light-beige: #f7f5e8;
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+  tool-guid-base64 {
+    font-size: 14px;
+  }
+}
+
+/* Ensure proper spacing from header/footer */
+tool-guid-base64 {
+  display: block;
+  width: 100%;
+}
+
+/* Print styles */
+@media print {
+  tool-guid-base64 .notification,
+  tool-guid-base64 .history-section {
+    display: none !important;
+  }
+}
