@@ -27,7 +27,7 @@ class WebSeo extends HTMLElement {
     const fullTitle = pageTitle ? `${pageTitle} - ${this.baseTitle}` : this.baseTitle
     
     // Construct full URL
-    const fullUrl = `${this.baseUrl}${pagePath}`
+    const fullUrl = pagePath ? `${this.baseUrl}${pagePath}/` : this.baseUrl
     
     // Construct full image URL
     const fullImageUrl = pageImage.startsWith('http') ? pageImage : `${this.baseUrl}${pageImage.replace('../../', '')}`
